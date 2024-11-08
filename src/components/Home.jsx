@@ -44,8 +44,7 @@ export default function Home() {
         <h1>Website Layout</h1><br></br><br></br>
         <p>
           Design a clean and responsive website layout that is visually
-          appealing and user-friendly. Focus on structured sections and
-          consistent styling.
+          appealing and user-friendly.
         </p><br></br>
         <p>Date: 4/11/2024</p>
       </Link>
@@ -53,11 +52,17 @@ export default function Home() {
         Second Task
         <h1>CatchHub Web App</h1><br></br>
         <p>
-          Develop the CatchHub Web App, managing and
-          tracking various digital tasks and
-          interactive elements.
+          Develop the CatchHub Web App.
         </p><br></br>
         <p>Date: 5/11/2024</p>
+      </Link>
+      <Link to="/task3" style={secondCardStyle}>
+        Third Task
+        <h1>Red Screens</h1><br></br>
+        <p>
+         .
+        </p><br></br>
+        <p>Date: 8/11/2024</p>
       </Link>
     </div>
     </div>
