@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import FirstTask from "./components/FirstTask";
@@ -9,6 +10,12 @@ import TSceenOne from "./components/TScreenOne";
 import TSceenTwo from "./components/TScreenTwo";
 
 function App() {
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://use.typekit.net/your-kit-id.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
