@@ -4,7 +4,7 @@ import urrannlogo from '../assets/urraanlogo.png'
 export default function Home() {
   const cardStyle = {
     width: '320px',
-    height: '300px',
+    zzzzzzzzzzzzzzzz: '300px',
     padding: '20px',
     textAlign: 'center',
     borderRadius: '10px',

@@ -2,45 +2,23 @@ import React from "react";
 import logo from "../assets/TaskThree/logo.png";
 import iconAward from "../assets/TaskThree/icon_awards.png";
 import one from "../assets/TaskThree/1.png";
+
 function TScreenTwo() {
   return (
     <div>
-      <div
-        style={{
-          padding: "20px",
-          backgroundColor: "#8d2b2b",
-          height: "120vh",
-          position: "relative", // Add relative positioning
-        }}
-      >
+      <div className="relative bg-[#8d2b2b] h-[120vh] p-5">
         <img
           src={logo}
           alt="Logo"
-          style={{ width: "190px", height: "190px", marginLeft: "100px",marginTop:"50px" }}
+          className="w-[190px] h-[190px] ml-[100px] mt-[50px]"
         />
-        <h1
-          style={{
-            fontSize: "100px",
-            margin: "10px 100px",
-            fontFamily: "Libre Franklin",
-            fontWeight: "700",
-          }}
-        >
+        <h1 className="text-[100px] ml-[100px] mt-2 font-[Libre Franklin] font-bold text-white">
           RED CARD 2018
         </h1>
-        <p
-          style={{ fontSize: "50px", marginBottom: "10px", marginLeft: "100px",fontWeight: "bold" }}
-        >
+        <p className="text-[50px] ml-[100px] font-bold text-white">
           China Digital Football Awards
         </p>
-        <div
-          style={{
-            width: "90%",
-            color: "#fff",
-            fontSize: "20px",
-            marginLeft: "100px",
-          }}
-        >
+        <div className="w-[90%] text-white text-lg ml-[100px] mt-2">
           <p>
             The Red Card is globally recognized as the leading annual report to
             assess the most influential European football clubs, leagues, and
@@ -61,106 +39,47 @@ function TScreenTwo() {
         </div>
 
         {/* White Triangle in the Bottom Right Corner */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            backgroundColor: "white",
-            clipPath: "polygon(100% 0, 0 100%, 100% 100%)",
-            width: "100px", // Adjust width for larger triangle
-            height: "100px", // Adjust height for larger triangle
-          }}
-        ></div>
+        <div className="absolute bottom-0 right-0 bg-white clip-path-triangle w-[100px] h-[100px]"></div>
       </div>
 
       {/* Best Clubs Section */}
       {Array(4)
         .fill()
         .map((_, index) => (
-          <div key={index} style={{ padding: "20px", marginLeft: "60px" }}>
-            <h2 style={{ fontSize: "50px", color: "#000",fontFamily: "'Libre Franklin', sans-serif",fontWeight: "bold" }}>
-              <img
-                src={iconAward}
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  
-                }}
-              />
-              &nbsp;BEST CLUBS
+          <div key={index} className="ml-[60px] mt-[60px] p-5">
+            <h2 className="text-[50px] font-[Libre Franklin] font-bold text-black flex items-center">
+              <img src={iconAward} className="w-10 h-10 mr-2" />
+              BEST CLUBS
             </h2>
-            <div
-              style={{
-                display: "flex",
-                // justifyContent: "center",
-                flexWrap: "wrap",
-                gap: "90px",
-                padding: "10px 0",
-              }}
-            >
+            <div className="flex flex-wrap gap-[90px] py-2">
               {Array(5)
                 .fill()
                 .map((_, i) => (
-                  <div key={i} style={{}}>
+                  <div key={i}>
                     <img
                       src={one}
                       alt="Club Logo"
-                      style={{ width: "160px", height: "160px" }}
+                      className="w-[160px] h-[160px]"
                     />
-                    <p
-                      style={{
-                        marginTop: "10px",
-                        textAlign: "center",
-                        color: "red",
-                        fontFamily:'Libre Franklin',
-                        fontWeight:'bold'
-                      }}
-                    >
-                      Lorem ipsum<br></br>
-                      <p style={{ color: "black" }}>Lorem</p>
+                    <p className="text-center font-[Libre Franklin] font-bold mt-2">
+                      <span className="text-red-600">Lorem ipsum</span>
+                      <br />
+                      <span className="text-black">Lorem</span>
                     </p>
                   </div>
                 ))}
             </div>
           </div>
         ))}
-      <div
-        style={{
-          backgroundColor: "#8d2b2b", // Red background color
-          color: "white",
-          fontWeight: "bold",
-          padding: "50px",
-          paddingLeft:'100px',
-          fontSize: "1.5em",
-          fontFamily: "bolton",
-          position: "relative",
-          // width: '400px',
-          // height: '100px',
-          display: "flex",
-          // alignItems: "center",
-          // justifyContent: "center",
-          // textAlign: "center",
-        }}
-      >
-        <p style={{ fontSize: "50px", fontWeight: "bold", margin: 0 }}>
+      <div className="relative bg-[#8d2b2b] text-white font-bold p-[100px] pl-[100px] text-[1.5em] flex items-center">
+        <p className="text-[50px] font-bold m-0">
           RED CARD 2019 WINNERS <br />
           AND REPORT TO BE LAUNCHED <br />
           ON 24TH JANUARY 2019.
         </p>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            backgroundColor: "white",
-            clipPath: "polygon(100% 0, 0 100%, 100% 100%)",
-            width: "100px",
-            height: "100px",
-          }}
-        ></div>
+        <div className="absolute bottom-0 right-0 bg-white clip-path-triangle w-[100px] h-[100px]"></div>
       </div>
-      <div style={{ height: "10px" }}></div>
+      <div className="h-[10px]"></div>
     </div>
   );
 }
